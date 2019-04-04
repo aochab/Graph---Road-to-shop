@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef _GLOBAL_INCLUDE_FILE_
 #define _GLOBAL_INCLUDE_FILE_
 
