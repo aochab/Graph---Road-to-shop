@@ -12,7 +12,7 @@ int ReadData( const char* sFileName, Vertex** pBuildings )
 		return -1;
 	}
 
-	int NumOfVertices = 0; //Liczba wierzcho³ków
+	int NumOfVertices = 0; //Liczba wierzchoÂ³kÃ³w
 	int tabSize = 0; //aktualny rozmiar tablicy
 
 	Vertex* pCopyBuilding = *pBuildings;
@@ -48,7 +48,7 @@ int ReadData( const char* sFileName, Vertex** pBuildings )
 			}
 			fscanf( fin, "%d %lf", &neighbour->n_Key, &neighbour->Length );
 
-			if( !pList->pHead ) //Jeœli nie ma ¿adnego s¹siada
+			if( !pList->pHead ) //JeÅ“li nie ma Â¿adnego sÂ¹siada
 				pList->pHead = neighbour;
 			else
 				pList->pTail->pNext = neighbour;
@@ -99,60 +99,3 @@ void PrintData( Vertex* buildings, int nSize )
 	}
 	fclose( fout );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-//-----------------------------------------------------------------
-int AllocAddMemNeigh( ListItem** pNeighbours, int nCurrentSize )
-{
-	int newSize = nCurrentSize + REALLOC;
-	ListItem* pTemp = (ListItem*)realloc( *pNeighbours, newSize * sizeof( ListItem ) );
-	if( !pTemp )
-	{
-		printf( "ERROR!AllocAddMemNeigh - realloc problem!\n" );
-		return 0;
-	}
-	*pNeighbours = pTemp;
-	memset( *pNeighbours + nCurrentSize, 0, REALLOC * sizeof( ListItem ) );
-	return REALLOC;
-}
-
-ListItem* neighbour = newVertex->pNeighbours;
-int NumOfNeighbours = 0;
-int tabSizeNeigh = 0;
-
-if( NumOfNeighbours == tabSizeNeigh )
-{
-tabSizeNeigh += AllocAddMemNeigh( &neighbour, NumOfNeighbours );
-if( NumOfNeighbours == tabSizeNeigh ) break;
-}
-*/
-
-
-
-/*	if( !newVertex->pNeighbours ) //Jeœli nie ma ¿adegno s¹siada
-newVertex->pNeighbours = neighbour; //dodaj
-else
-{
-ListItem* temp = newVertex->pNeighbours; //Wskazuje na pocz¹tek tablicy s¹siadów
-
-while( temp->pNext ) //Przechodzimy do ostatniego wczytanego wiercho³ka s¹siada
-temp = temp->pNext;
-temp->pNext = neighbour; //Wstawiamy na koniec listy nowego s¹siada
-}*/
